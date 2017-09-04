@@ -1,0 +1,21 @@
+[Desktop Entry]
+Name=Office Suite Installer
+Name[es_AR]=Instalador de una suite de oficina
+Name[fr_FR]=Installateur de suite bureautique
+Name[ja_JP]=オフィススイートのインストール
+Name[pl]=Instalacja pakietu biurowego
+Name[pt_BR]=Instalador de Suites de Office (Escritório)
+Name[pt_P]=Office Suite Installer
+Comment=Install an Office suite
+Comment[es_AR]=Instala una suite de oficina
+Comment[fr_FR]=Installe une suite bureautique
+Comment[it_IT]=Installa una suite Office
+Comment[ja_JP]=オフィススイートをインストールします。
+Comment[pl]=Instalacja pakietu biurowego
+Comment[pt_BR]=Instale um pacote de algum Office (NT: aplicativo de escritório)
+Comment[pt_PT]=Instale um pacote Office
+Exec=remsu /usr/bin/sparky-office
+Icon=x-office-document
+Terminal=false
+Type=Application
+Categories=Office;

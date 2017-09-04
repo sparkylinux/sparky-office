@@ -1,0 +1,1 @@
+?package(sparky-office):needs="X11" section="Applications/Office"        title="Office Suite Installer" command="remsu /usr/bin/sparky-office" icon="x-office-document"
