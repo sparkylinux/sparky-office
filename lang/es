@@ -1,8 +1,7 @@
 # Archivo de localización en español para Sparky Office.
 # Copyright 2015 Fernando "seacat" Velo <seacat.linux@gmail.com> 2015/12/24
 # Bajo la licencia GNU GPL v2
-# Last update 2016/07/09 by pavroo
-
+# Last update 2017/11/06 by pavroo
 LOCAL1="Nombre"
 LOCAL2="Descripción"
 LOCAL3="Salir"
@@ -51,7 +50,7 @@ LOCAL45="Light-weight viewer for PDF files"
 LOCAL46="Application is already installed."
 LOCAL47="This will install new application.\nMake sure your system is up-to-date before you start this."
 LOCAL48="The application has been installed."
-
+LOCAL49="It can not be installed on your version of Debian/Sparky."
 ### .desktop file to be translated too
 # Name[es_AR]=Instalador de una suite de oficina
 # Comment[es_AR]=Instala una suite de oficina

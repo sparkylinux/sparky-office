@@ -2,8 +2,7 @@
 # Copyright 2015 Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2015/11/08
 # Under the GNU GPL v2
 # Translated to Polish by pavroo
-# Last update 2016/07/09 by pavroo
-
+# Last update 2017/11/06 by pavroo
 LOCAL1="Nazwa"
 LOCAL2="Opis"
 LOCAL3="Zakończ"
@@ -52,7 +51,7 @@ LOCAL45="Lekka przeglądarka plików PDF"
 LOCAL46="Aplikacja jest już zainstalowana."
 LOCAL47="Instalacja nowego pakietu.\nUpewnij się, że Twój system jest zaktualizowany, zanim rozpoczniesz."
 LOCAL48="Aplikacja została zainstalowana."
-
+LOCAL49="Ta aplikacja nie może być zainstalowany na obecnej wersji Debiana/Sparky."
 ### .desktop file, również do przetłumaczenia
 # Name[pl_PL]=Instalacja pakietu biurowego
 # Comment[pl_PL]=Instalacja pakietu biurowego

@@ -1,9 +1,8 @@
 # Japanese localization file for Sparky Office.
 # Copyright 2015 Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2015/11/08
 # Under the GNU GPL v2
-# Last update 2017/01/06
 # Translated to Japanese by BALLOON a.k.a. Fu-sen
-
+# Last update 2017/11/06 by pavroo
 LOCAL1="名前"
 LOCAL2="説明"
 LOCAL3="終了"
@@ -52,7 +51,7 @@ LOCAL45="PDF ファイル用の軽量ビューア
 LOCAL46="アプリケーションはすでにインストールされています。"
 LOCAL47="これより新しいアプリケーションがインストールされます。\n開始前にシステムが最新である事を確認してください。"
 LOCAL48="アプリケーションがインストールされました。"
-
+LOCAL49="It can not be installed on your version of Debian/Sparky."
 ### .desktop file to be translated too
 # Name[ja_JP]=オフィススイートのインストール
 # Comment[ja_JP]=オフィススイートをインストールします。

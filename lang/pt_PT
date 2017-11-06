@@ -1,8 +1,7 @@
 # Arquivo de localização para Portugues de Portugal do Sparky Office.
 # Copyright 2016 Joel Chaves "Flacc" <joel_chaves@icloud.com> Sunday 24 January 00:50:00 WET 2016
 # Sob a Licença GNU GPL v2
-# Last update 2016/07/09 by pavroo
-
+# Last update 2017/11/06 by pavroo
 LOCAL1="Nome"
 LOCAL2="Descrição"
 LOCAL3="Sair"
@@ -51,7 +50,7 @@ LOCAL45="Light-weight viewer for PDF files"
 LOCAL46="Application is already installed."
 LOCAL47="This will install new application.\nMake sure your system is up-to-date before you start this."
 LOCAL48="The application has been installed."
-
+LOCAL49="It can not be installed on your version of Debian/Sparky."
 ### Arquivo a ser traduzido também .desktop
 # Name[pt_P]=Office Suite Installer
 # Comment[pt_PT]=Instale um pacote Office

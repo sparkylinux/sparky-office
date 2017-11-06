@@ -31,5 +31,5 @@ else
 	if [ ! -d /usr/share/sparky/sparky-office ]; then
 		mkdir -p /usr/share/sparky/sparky-office
 	fi
-	cp sparky-office/* /usr/share/sparky/sparky-office/
+	cp lang/* /usr/share/sparky/sparky-office/
 fi

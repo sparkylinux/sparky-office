@@ -1,8 +1,7 @@
 ﻿# Fichier de localisation française de Sparky Office.
 # Copyright 2016 hiver <hiver@club-internet.fr> 2016/05/12
 # Sous licence GNU GPL v2
-# Last update 2016/07/09 by pavroo
-
+# Last update 2017/11/06 by pavroo
 LOCAL1="Nom"
 LOCAL2="Description"
 LOCAL3="Quitter"
@@ -51,7 +50,7 @@ LOCAL45="Light-weight viewer for PDF files"
 LOCAL46="Application is already installed."
 LOCAL47="This will install new application.\nMake sure your system is up-to-date before you start this."
 LOCAL48="The application has been installed."
-
+LOCAL49="It can not be installed on your version of Debian/Sparky."
 ### .desktop file to be translated to
 # Name[fr_FR]=Installateur de suite bureautique
 # Comment[fr_FR]=Installe une suite bureautique

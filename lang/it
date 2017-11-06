@@ -1,8 +1,7 @@
 # File di localizzazione in italiano per Sparky Office.
 # Copyright 2015 Carlo Troiani <troianicarlo@gmail.com> 08/11/2015
 # Rilasciato sotto licenza GNU GPL v2
-# Last update 2016/07/09 by pavroo
-
+# Last update 2017/11/06 by pavroo
 LOCAL1="Nome"
 LOCAL2="Descrizione"
 LOCAL3="Esci"
@@ -51,7 +50,7 @@ LOCAL45="Light-weight viewer for PDF files"
 LOCAL46="Application is already installed."
 LOCAL47="This will install new application.\nMake sure your system is up-to-date before you start this."
 LOCAL48="The application has been installed."
-
+LOCAL49="Non può essere installato sulla tua versione di Debian/Sparky."
 ### .desktop file to be translated too
 # Name[it_IT]=Office Suite Installer
 # Comment[it_IT]=Installa una suite Office

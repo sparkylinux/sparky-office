@@ -3,8 +3,7 @@
 # Traduzido por  Joel Chaves "Flacc"  <joel_chaves@icloud.com> 24/01/2016
 # Revisado e adaptado por Claudio Cesar de Sá "ccs1664" <ccs1664@gmail.com> 29/01/2016
 # Sob a Licença GNU GPL v2
-# Last update 2016/07/09 by pavroo
-
+# Last update 2017/11/06 by pavroo
 LOCAL1="Nome"
 LOCAL2="Descrição"
 LOCAL3="Sair"
@@ -53,7 +52,7 @@ LOCAL45="Light-weight viewer for PDF files"
 LOCAL46="Application is already installed."
 LOCAL47="This will install new application.\nMake sure your system is up-to-date before you start this."
 LOCAL48="The application has been installed."
-
+LOCAL49="It can not be installed on your version of Debian/Sparky."
 ### Arquivo a ser traduzido também .desktop
 # Name[pt_BR]=Instalador de Suites de Office (Escritório)
 # Comment[pt_BR]=Instale um pacote de algum Office (NT: aplicativo de escritório)
