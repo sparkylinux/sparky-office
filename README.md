@@ -1,7 +1,7 @@
 Sparky Office
 This tool lets you install an office suit you like
 
-Copyright (C) 2015-2017 Paweł Pijanowski and others, see copyright file.
+Copyright (C) 2015-2018 Paweł Pijanowski and others, see copyright file.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
