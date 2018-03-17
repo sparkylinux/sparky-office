@@ -1,0 +1,47 @@
+#!/bin/bash
+
+#This script has been copied from Puppy Linux forum http://www.murga-linux.com/puppy/viewtopic.php?t=81841&sid=0a080a55e4109ab26850550a31e4eaf8
+#The author of it is stu91
+#Last modification by pavroo <pavroo@onet.eu> 2017/May/30 for SparkyLinux
+
+## Application menu file ###############################################
+
+GET_MENU="$@"
+
+########################################################################
+
+function START_MENU () {
+
+## MENU items ##########################################################
+
+MENU_ITEMS="` cat "$GET_MENU" | tr '\n' '|' | sed '$s/.$//' `"
+
+## Defaults ############################################################
+
+TRAY_ICON="cdrom_unmount"
+POPUP_TEXT="Optical media"
+PIPE_FIFO=$(mktemp -u /tmp/menutray2.XXXXXXXX)
+
+## 1 Create PIPE_FIFO file #############################################
+  mkfifo $PIPE_FIFO
+
+## 2 Attach a filedescriptor to this PIPE_FIFO #########################
+  exec 3<> $PIPE_FIFO
+ 
+## 3 Run yad and tell it to read its stdin from the file descriptor ####
+GUI=$(yad --notification --kill-parent --listen \
+--image="$TRAY_ICON" \
+--text="$POPUP_TEXT" \
+--command="bash -c LEFT_CLICK" <&3 ) &
+
+## 4 Write menu to file descriptor to generate MENU ####################
+ echo "menu:$MENU_ITEMS" >&3
+}
+
+## Check if menu file is provided ######################################
+ 
+  if [ -z "$GET_MENU" ]; then
+  echo "traymenu usage: $0 /opt/tray/sparky-menu-optical" && exit
+  else
+  START_MENU
+  fi

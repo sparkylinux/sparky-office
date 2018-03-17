@@ -1,0 +1,4 @@
+Mount CD/DVD disk! udisks --mount /dev/sr0
+Unmount CD/DVD disk! udisks --unmount /dev/sr0
+Force unmount CD/DVD disk! remsu "udisks --unmount /dev/sr0"
+Eject CD/DVD disk! udisks --eject /dev/sr0

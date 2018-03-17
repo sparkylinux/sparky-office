@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Sparky Optical
+Comment[en_US]=Sparky Optical
+Exec=/usr/bin/sparky-optical /opt/tray/sparky-menu-optical
+Icon=cdrom_unmount
+Terminal=false
+MultipleArgs=false
+Type=Application
+Categories=Applications;System
+

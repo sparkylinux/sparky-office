@@ -15,21 +15,14 @@
 #  Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 
 if [ "$1" = "uninstall" ]; then
-	rm -f /usr/bin/sparky-office
-	rm -f /usr/lib/sparky-aptus/inst/sparky-office.desktop
-   	rm -f /usr/share/applications/sparky-office.desktop
-	rm -f /usr/share/menu/sparky-office
-	rm -rf /usr/share/sparky/sparky-office
+	rm -f /usr/bin/sparky-optical
+	rm -f /opt/tray/sparky-menu-optical
+	rm -f /etc/xdg/autostart/sparky-optical.desktop
 else
-	cp bin/sparky-office /usr/bin/
-	if [ ! -d /usr/lib/sparky-aptus/inst ]; then
-		mkdir -p /usr/lib/sparky-aptus/inst
+	cp bin/* /usr/bin/
+	if [ ! -d /opt/tray ]; then
+		mkdir -p /opt/tray
 	fi
-	cp inst/* /usr/lib/sparky-aptus/inst/
-	cp applications/* /usr/share/applications/
-	cp menu/* /usr/share/menu/
-	if [ ! -d /usr/share/sparky/sparky-office ]; then
-		mkdir -p /usr/share/sparky/sparky-office
-	fi
-	cp lang/* /usr/share/sparky/sparky-office/
+	cp opt/* /opt/tray/
+	cp etc/* /etc/xdg/autostart/
 fi
