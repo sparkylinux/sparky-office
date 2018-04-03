@@ -1,0 +1,644 @@
+#!/bin/bash
+
+# sparky-office script lets you install an office app you like
+# Copyright 2015-2018 Paweł "pavroo" Pijanowski <pavroo@onet.eu>
+# Licensed under the GPLv2 license see /usr/share/common-licenses/GPL-2
+# Created 2015/05/19
+# Last update 2018/03/30
+
+# get default's locale file
+DEFLOCDIR="/usr/share/sparky/sparky-office"
+if [ "`cat /etc/default/locale | grep de_DE`" != "" ]; then
+. $DEFLOCDIR/de
+elif [ "`cat /etc/default/locale | grep es_AR`" != "" ]; then
+. $DEFLOCDIR/es
+elif [ "`cat /etc/default/locale | grep fr_FR`" != "" ]; then
+. $DEFLOCDIR/fr
+elif [ "`cat /etc/default/locale | grep it_IT`" != "" ]; then
+. $DEFLOCDIR/it
+elif [ "`cat /etc/default/locale | grep ja_JP`" != "" ]; then
+. $DEFLOCDIR/ja
+elif [ "`cat /etc/default/locale | grep pl_PL`" != "" ]; then
+. $DEFLOCDIR/pl
+elif [ "`cat /etc/default/locale | grep pt_BR`" != "" ]; then
+. $DEFLOCDIR/pt_BR
+elif [ "`cat /etc/default/locale | grep pt_PT`" != "" ]; then
+. $DEFLOCDIR/pt_PT
+else
+. $DEFLOCDIR/en
+fi
+
+testroot="`whoami`"
+if [ "$testroot" != "root" ]; then
+	echo "Must be root... Exiting now..."
+fi
+
+DIALOG480="yad --window-icon=x-office-document --width=520 --height=420 --center"
+DIALOG="yad --window-icon=x-office-document --width=400 --height=200 --center"
+TITLE="--always-print-result --dialog-sep --image=x-office-document --title="
+TEXT="--text="
+MENU="--list --column=$LOCAL1 --column=$LOCAL2"
+OKEXIT=" --button=Ok:0 --button=$LOCAL3:1"
+MSGBOX="--button=Ok:0"
+TITLETEXT="$LOCAL4"
+if [ -f /usr/bin/sparky-xterm ];then
+	SPARKYXTERM="/usr/bin/sparky-xterm"
+else
+	echo "sparky-xterm is missing... Exiting..."
+	exit 1
+fi
+PINGTEST=$(ping -c 1 debian.org | grep [0-9])
+ARCHARM="`uname -m | grep arm`"
+
+mainmenu () {
+CHOICES=`$DIALOG480 $TITLE"$TITLETEXT" $OKEXIT $MENU $TEXT"$LOCAL5" \
+AbiWord "$LOCAL6" \
+Atril "$LOCAL40" \
+Evince "$LOCAL41" \
+Gnumeric "$LOCAL50" \
+LibreOffice "$LOCAL8" \
+MS_Office "$LOCAL9" \
+MuPDF "$LOCAL42" \
+Okular "$LOCAL43" \
+OpenOffice "$LOCAL10" \
+Qpdfview "$LOCAL44" \
+WPSOffice "$LOCAL11" \
+Xpdf "$LOCAL45" \
+Exit "$LOCAL12"`
+
+if [ "$?" = "0" ]; then
+	CHOICE=`echo $CHOICES | cut -d "|" -f 1`
+else
+	exit 0
+fi
+
+if [ "$CHOICE" = "AbiWord" ]; then
+	abiwordmenu
+elif [ "$CHOICE" = "Atril" ]; then
+	atrilmenu
+elif [ "$CHOICE" = "Evince" ]; then
+	evincemenu
+elif [ "$CHOICE" = "Gnumeric" ]; then
+	gnumericmenu
+elif [ "$CHOICE" = "LibreOffice" ]; then
+	libreofficemenu
+elif [ "$CHOICE" = "MS_Office" ]; then
+	msmenu
+elif [ "$CHOICE" = "MuPDF" ]; then
+	mupdfmenu
+elif [ "$CHOICE" = "Okular" ]; then
+	okularmenu
+elif [ "$CHOICE" = "OpenOffice" ]; then
+	openofficemenu
+elif [ "$CHOICE" = "Qpdfview" ]; then
+	qpdfviewmenu
+elif [ "$CHOICE" = "WPSOffice" ]; then
+	wpsmenu
+elif [ "$CHOICE" = "Xpdf" ]; then
+	xpdfmenu
+elif [ "$CHOICE" = "Exit" ]; then
+	exit 0
+else
+	exit 0
+fi
+}
+
+abiwordmenu () {
+# check is AbiWord installed
+if [ -f /usr/bin/abiword ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL13 \n\n$LOCAL14"
+	mainmenu
+fi
+
+# check the connection
+if [ "$PINGTEST" = "" ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL15 \n\n$LOCAL14"
+	exit 0
+fi
+
+$DIALOG $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL16 \n\n$LOCAL20"
+
+if [ "$?" != "0" ]; then
+
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17 \n\n$LOCAL14"
+	exit 0
+
+else
+
+	$SPARKYXTERM "apt-get install abiword -y"
+	$SPARKYXTERM "apt-get install -f -y"
+
+fi
+
+# check has it been installed
+if [ -f /usr/bin/abiword ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL18 \n\n$LOCAL14"
+	exit 0
+
+else
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17 \n\n$LOCAL14"
+	exit 0
+fi
+}
+
+atrilmenu () {
+# check is atril installed
+if [ -f /usr/bin/atril ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL46 \n\n$LOCAL14"
+	mainmenu
+fi
+
+# check the connection
+if [ "$PINGTEST" = "" ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL15 \n\n$LOCAL14"
+	exit 0
+fi
+
+$DIALOG $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL47\n\n$LOCAL20"
+
+if [ "$?" != "0" ]; then
+
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17 \n\n$LOCAL14"
+	exit 0
+
+else
+
+	# install package
+	$SPARKYXTERM "apt-get install atril -y"
+	$SPARKYXTERM "apt-get install -f -y"
+
+fi
+
+# check has the application been installed
+if [ -f /usr/bin/atril ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL48 \n\n$LOCAL14"
+	exit 0
+
+else
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL23 \n\n$LOCAL14"
+	exit 0
+fi
+}
+
+evincemenu () {
+# check is evince installed
+if [ -f /usr/bin/evince ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL46 \n\n$LOCAL14"
+	mainmenu
+fi
+
+# check the connection
+if [ "$PINGTEST" = "" ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL15 \n\n$LOCAL14"
+	exit 0
+fi
+
+$DIALOG $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL47\n\n$LOCAL20"
+
+if [ "$?" != "0" ]; then
+
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17 \n\n$LOCAL14"
+	exit 0
+
+else
+
+	# install package
+	$SPARKYXTERM "apt-get install evince -y"
+	$SPARKYXTERM "apt-get install -f -y"
+
+fi
+
+# check has the application been installed
+if [ -f /usr/bin/evince ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL48 \n\n$LOCAL14"
+	exit 0
+
+else
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL23 \n\n$LOCAL14"
+	exit 0
+fi
+}
+
+gnumericmenu () {
+# check is Gnumeric installed
+if [ -f /usr/bin/gnumeric ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL51 \n\n$LOCAL14"
+	mainmenu
+fi
+
+# check the connection
+if [ "$PINGTEST" = "" ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL15 \n\n$LOCAL14"
+	exit 0
+fi
+
+$DIALOG $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL52 \n\n$LOCAL20"
+
+if [ "$?" != "0" ]; then
+
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17 \n\n$LOCAL14"
+	exit 0
+
+else
+
+	$SPARKYXTERM "apt-get install gnumeric -y"
+	$SPARKYXTERM "apt-get install -f -y"
+
+fi
+
+# check has it been installed
+if [ -f /usr/bin/gnumeric ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL53 \n\n$LOCAL14"
+	exit 0
+
+else
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17 \n\n$LOCAL14"
+	exit 0
+fi
+}
+
+libreofficemenu () {
+# check is LibreOffice installed
+if [ -f /usr/bin/libreoffice ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL24 \n\n$LOCAL14"
+	mainmenu
+fi
+
+# check is OpenOffice installed
+if [ -f /opt/openoffice4/program/soffice ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL25\n\n$LOCAL14"
+	exit 0
+fi
+
+# check the connection
+if [ "$PINGTEST" = "" ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL15 \n\n$LOCAL14"
+	exit 0
+fi
+
+$DIALOG $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL26\n\n$LOCAL20"
+
+if [ "$?" != "0" ]; then
+
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17 \n\n$LOCAL14"
+	exit 0
+
+else
+	$SPARKYXTERM "apt-get install libreoffice -y"
+	$SPARKYXTERM "apt-get install -f -y"
+fi
+
+# check has LibreOffice been installed
+if [ -f /usr/bin/libreoffice ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL24 \n\n$LOCAL14"
+	exit 0
+
+else
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL23\n\n$LOCAL14"
+	exit 0
+fi
+}
+
+msmenu () {
+# check is MS Office installed
+if [ -f /etc/xdg/menus/applications-merged/ms.menu ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL27 \n\n$LOCAL14"
+	mainmenu
+fi
+
+# check the connection
+if [ "$PINGTEST" = "" ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL15\n\n$LOCAL14"
+	exit 0
+fi
+
+$DIALOG $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL28\n\n$LOCAL20"
+
+if [ "$?" != "0" ]; then
+
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17 \n\n$LOCAL14"
+	exit 0
+
+else
+
+	# install deb package
+	$SPARKYXTERM "apt-get install ms-online-apps -y"
+	$SPARKYXTERM "apt-get install -f -y"
+	update-menus
+
+fi
+
+# check has MS Office been installed
+if [ -f /etc/xdg/menus/applications-merged/ms.menu ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL29 \n\n$LOCAL14"
+	exit 0
+
+else
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL23\n\n$LOCAL14"
+	exit 0
+fi
+}
+
+mupdfmenu () {
+# check is mupdf installed
+if [ -f /usr/bin/mupdf ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL46 \n\n$LOCAL14"
+	mainmenu
+fi
+
+# check the connection
+if [ "$PINGTEST" = "" ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL15 \n\n$LOCAL14"
+	exit 0
+fi
+
+$DIALOG $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL47\n\n$LOCAL20"
+
+if [ "$?" != "0" ]; then
+
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17 \n\n$LOCAL14"
+	exit 0
+
+else
+
+	# install package
+	$SPARKYXTERM "apt-get install mupdf -y"
+	$SPARKYXTERM "apt-get install -f -y"
+
+fi
+
+# check has the application been installed
+if [ -f /usr/bin/mupdf ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL48 \n\n$LOCAL14"
+	exit 0
+
+else
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL23 \n\n$LOCAL14"
+	exit 0
+fi
+}
+
+okularmenu () {
+# check is okular installed
+if [ -f /usr/bin/okular ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL46 \n\n$LOCAL14"
+	mainmenu
+fi
+
+# check the connection
+if [ "$PINGTEST" = "" ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL15 \n\n$LOCAL14"
+	exit 0
+fi
+
+$DIALOG $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL47\n\n$LOCAL20"
+
+if [ "$?" != "0" ]; then
+
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17 \n\n$LOCAL14"
+	exit 0
+
+else
+
+	# install package
+	$SPARKYXTERM "apt-get install okular -y"
+	$SPARKYXTERM "apt-get install -f -y"
+
+fi
+
+# check has the application been installed
+if [ -f /usr/bin/okular ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL48 \n\n$LOCAL14"
+	exit 0
+
+else
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL23 \n\n$LOCAL14"
+	exit 0
+fi
+}
+
+openofficemenu () {
+if [ "$ARCHARM" != "" ]; then
+	$DIALOG $TEXT"\n$LOCAL49\n\n$LOCAL14" $TITLE"$TITLETEXT" $MSGBOX
+	exit 1
+fi
+
+# check is OpenOffice installed
+if [ -f /opt/openoffice4/program/soffice ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL15 \n\n$LOCAL14"
+	mainmenu
+fi
+
+# check is LibreOffice installed
+if [ -f /usr/bin/libreoffice ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL31\n\n$LOCAL14"
+	exit 0
+fi
+
+# check the connection
+if [ "$PINGTEST" = "" ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL15\n\n$LOCAL14"
+	exit 0
+fi
+
+$DIALOG $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL32\n\n$LOCAL20"
+
+if [ "$?" != "0" ]; then
+
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17 \n\n$LOCAL14"
+	exit 0
+
+else
+
+	# check the openoffice list
+	if [ ! -f /etc/apt/sources.list.d/openoffice.list ]; then
+cat > /etc/apt/sources.list.d/openoffice.list <<FOO
+# Unofficial OpenOffice repository for Debian
+deb http://downloads.sourceforge.net/project/apacheoo-deb/debian testing main
+
+FOO
+
+	# install the keyring
+	$SPARKYXTERM "apt-key adv --keyserver keys.gnupg.net --recv-keys 90127F5B"
+	$SPARKYXTERM "apt-get update"
+
+	else
+
+		rm -f /etc/apt/sources.list.d/openoffice.list
+
+cat > /etc/apt/sources.list.d/openoffice.list <<FOO
+# Unofficial OpenOffice repository for Debian
+deb http://downloads.sourceforge.net/project/apacheoo-deb/debian testing main
+
+FOO
+
+		$SPARKYXTERM "apt-get update"
+
+	fi
+
+	# install OpenOffice
+	$SPARKYXTERM "apt-get install openoffice-brand-en-us openoffice-brand-writer openoffice-brand-calc openoffice-brand-impress openoffice-brand-base openoffice-brand-draw openoffice-brand-math openoffice-pyuno openoffice-ooofonts openoffice-ooolinguistic openoffice-debian-menus -y"
+	$SPARKYXTERM "apt-get install -f -y"
+
+fi
+
+# check has OpenOffice been installed
+if [ -f /opt/openoffice4/program/soffice ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL33 \n\n$LOCAL14"
+	exit 0
+
+else
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL23\n\n$LOCAL14"
+	exit 0
+fi
+}
+
+qpdfviewmenu () {
+# check is qpdfview installed
+if [ -f /usr/bin/qpdfview ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL46 \n\n$LOCAL14"
+	mainmenu
+fi
+
+# check the connection
+if [ "$PINGTEST" = "" ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL15 \n\n$LOCAL14"
+	exit 0
+fi
+
+$DIALOG $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL47\n\n$LOCAL20"
+
+if [ "$?" != "0" ]; then
+
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17 \n\n$LOCAL14"
+	exit 0
+
+else
+
+	# install package
+	$SPARKYXTERM "apt-get install qpdfview -y"
+	$SPARKYXTERM "apt-get install -f -y"
+
+fi
+
+# check has the application been installed
+if [ -f /usr/bin/qpdfview ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL48 \n\n$LOCAL14"
+	exit 0
+
+else
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL23 \n\n$LOCAL14"
+	exit 0
+fi
+}
+
+wpsmenu () {
+if [ "$ARCHARM" != "" ]; then
+	$DIALOG $TEXT"\n$LOCAL49\n\n$LOCAL14" $TITLE"$TITLETEXT" $MSGBOX
+	exit 1
+fi
+
+# check is WPS Office installed
+if [ -f /usr/bin/wps ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL34\n\n$LOCAL14"
+	mainmenu
+fi
+
+# check the connection
+if [ "$PINGTEST" = "" ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL15 \n\n$LOCAL14"
+	exit 0
+fi
+
+$DIALOG $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL35\n\n$LOCAL20"
+
+if [ "$?" != "0" ]; then
+
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17 \n\n$LOCAL14"
+	exit 0
+
+else
+
+	# install deb package
+	$SPARKYXTERM "apt-get install wps-office -y"
+	$SPARKYXTERM "apt-get install -f -y"
+fi
+
+# check has WPS Office been installed
+if [ -f /usr/bin/wps ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL36"
+
+else
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL23\n\n$LOCAL14"
+	exit 0
+fi
+
+# check and install WPS font pack
+if [ -f /usr/share/fonts/wps-office/FZCCHK.TTF ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL37\n\n$LOCAL14"
+fi
+
+$DIALOG $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL38"
+if [ "$?" != "0" ]; then
+
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17\n\n$LOCAL14"
+	exit 0
+
+else
+
+	# install deb package
+	$SPARKYXTERM "apt-get install wps-office-fonts -y"
+	$SPARKYXTERM "apt-get install -f -y"
+fi
+
+# check has WPS Office font pack been installed
+if [ -f /usr/share/fonts/wps-office/FZCCHK.TTF ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL39"
+	exit 0
+
+else
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL23\n\n$LOCAL14"
+	exit 0
+fi
+}
+
+xpdfmenu () {
+# check is xpdf installed
+if [ -f /usr/bin/xpdf ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL46 \n\n$LOCAL14"
+	mainmenu
+fi
+
+# check the connection
+if [ "$PINGTEST" = "" ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL15 \n\n$LOCAL14"
+	exit 0
+fi
+
+$DIALOG $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL47\n\n$LOCAL20"
+
+if [ "$?" != "0" ]; then
+
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL17 \n\n$LOCAL14"
+	exit 0
+
+else
+
+	# install package
+	$SPARKYXTERM "apt-get install xpdf -y"
+	$SPARKYXTERM "apt-get install -f -y"
+
+fi
+
+# check has the application been installed
+if [ -f /usr/bin/xpdf ]; then
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL48 \n\n$LOCAL14"
+	exit 0
+
+else
+	$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL23 \n\n$LOCAL14"
+	exit 0
+fi
+}
+
+mainmenu

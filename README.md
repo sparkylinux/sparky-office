@@ -1,7 +1,7 @@
-Sparky Optical
-This tool helps mounting, unmounting and ejecting optical disks via panel's tray icon
+Sparky Office
+This tool lets you install an office suit you like
 
-Copyright (C) 2014-2018 Paweł Pijanowski
+Copyright (C) 2015-2018 Paweł Pijanowski and others, see copyright file.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,8 +18,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Dependencies:
 -------------
-gksu
-udisks
+apt
+coreutils
+dpkg
+grep
+gawk
+iputils-ping
+sparky-remsu
+sparky-xterm (>= 0.2.0)
 yad
 
 Install:
