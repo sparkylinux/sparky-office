@@ -1,7 +1,7 @@
 # File di localizzazione in italiano per Sparky Office.
 # Copyright 2015 Carlo Troiani <troianicarlo@gmail.com> 08/11/2015
 # Rilasciato sotto licenza GNU GPL v2
-# Last update 2018/03/30 by pavroo
+# Last update 2018/04/22 by pavroo
 LOCAL1="Nome"
 LOCAL2="Descrizione"
 LOCAL3="Esci"
@@ -55,6 +55,14 @@ LOCAL50="Installa Gnumeric"
 LOCAL51="Gnumeric e' già installato."
 LOCAL52="Questo installerà Gnumeric.\nAssicurati che il sistema sia aggiornato prima di procedere."
 LOCAL53="Gnumeric sono stati installati correttamente."
+LOCAL54="Remove"
+LOCAL55="Reinstall"
+LOCAL56="Install"
+LOCAL57="This package is already installed."
+LOCAL58="What would you like to do now?"
+LOCAL59="The package has been successfully installed."
+LOCAL60="Should I install the package you have chosen?"
+LOCAL61="This package is not available for your system version."
 ### .desktop file to be translated too
 # Name[it_IT]=Office Suite Installer
 # Comment[it_IT]=Installa una suite Office

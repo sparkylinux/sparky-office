@@ -2,7 +2,7 @@
 # Copyright 2015 Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2015/11/08
 # Under the GNU GPL v2
 # Translated to Polish by pavroo
-# Last update 2018/03/30 by pavroo
+# Last update 2018/04/22 by pavroo
 LOCAL1="Nazwa"
 LOCAL2="Opis"
 LOCAL3="Zakończ"
@@ -56,6 +56,14 @@ LOCAL50="Instalacja Gnumeric"
 LOCAL51="Gnumeric jest już zainstalowany."
 LOCAL52="Instalacja Gnumeric.\nUpewnij się, że Twój system jest zaktualizowany, zanim rozpoczniesz."
 LOCAL53="Gnumeric został zainstalowany."
+LOCAL54="Usuń"
+LOCAL55="Reinstaluj"
+LOCAL56="Zainstaluj"
+LOCAL57="Ten pakiet jest już zainstalowany."
+LOCAL58="Co chcesz teraz zrobić?"
+LOCAL59="Pakiet został poprawnie zainstalowany."
+LOCAL60="Czy mam zainstalować wybrany pakiet?"
+LOCAL61="Ten pakiet nie jest dostępny dla wersji twojego systemu."
 ### .desktop file, również do przetłumaczenia
 # Name[pl_PL]=Instalacja pakietu biurowego
 # Comment[pl_PL]=Instalacja pakietu biurowego

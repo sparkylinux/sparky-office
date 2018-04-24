@@ -16,18 +16,14 @@
 
 if [ "$1" = "uninstall" ]; then
 	rm -f /usr/bin/sparky-office
-	rm -f /usr/lib/sparky-aptus/inst/sparky-office.desktop
-   	rm -f /usr/share/applications/sparky-office.desktop
-	rm -f /usr/share/menu/sparky-office
+	rm -f /usr/lib/sparky-aptus/office/*
 	rm -rf /usr/share/sparky/sparky-office
 else
 	cp bin/sparky-office /usr/bin/
-	if [ ! -d /usr/lib/sparky-aptus/inst ]; then
-		mkdir -p /usr/lib/sparky-aptus/inst
+	if [ ! -d /usr/lib/sparky-aptus/office ]; then
+		mkdir -p /usr/lib/sparky-aptus/office
 	fi
-	cp inst/* /usr/lib/sparky-aptus/inst/
-	cp applications/* /usr/share/applications/
-	cp menu/* /usr/share/menu/
+	cp office/* /usr/lib/sparky-aptus/office/
 	if [ ! -d /usr/share/sparky/sparky-office ]; then
 		mkdir -p /usr/share/sparky/sparky-office
 	fi

@@ -1,7 +1,7 @@
 ﻿# Fichier de localisation française de Sparky Office.
 # Copyright 2016 hiver <hiver@club-internet.fr> 2016/05/12
 # Sous licence GNU GPL v2
-# Last update 2018/03/30 by pavroo
+# Last update 2018/04/22 by pavroo
 LOCAL1="Nom"
 LOCAL2="Description"
 LOCAL3="Quitter"
@@ -55,6 +55,14 @@ LOCAL50="Installer AbiWord"
 LOCAL51="Gnumeric est déjà installé."
 LOCAL52="Ceci va installer Gnumeric.\nVérifiez que votre système est à jour avant de lancer cette opération."
 LOCAL53="Gnumeric ont été installés."
+LOCAL54="Remove"
+LOCAL55="Reinstall"
+LOCAL56="Install"
+LOCAL57="This package is already installed."
+LOCAL58="What would you like to do now?"
+LOCAL59="The package has been successfully installed."
+LOCAL60="Should I install the package you have chosen?"
+LOCAL61="This package is not available for your system version."
 ### .desktop file to be translated to
 # Name[fr_FR]=Installateur de suite bureautique
 # Comment[fr_FR]=Installe une suite bureautique

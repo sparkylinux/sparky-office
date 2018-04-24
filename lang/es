@@ -1,7 +1,7 @@
 # Archivo de localización en español para Sparky Office.
 # Copyright 2015 Fernando "seacat" Velo <seacat.linux@gmail.com> 2015/12/24
 # Bajo la licencia GNU GPL v2
-# Last update 2018/03/30 by pavroo
+# Last update 2018/04/22 by pavroo
 LOCAL1="Nombre"
 LOCAL2="Descripción"
 LOCAL3="Salir"
@@ -55,6 +55,14 @@ LOCAL50="Instalar Gnumeric"
 LOCAL51="Gnumeric ya está instalado."
 LOCAL52="Esto instalará Gnumeric.\nAsegúrese que su sistema esté actualizado antes de comenzar con esto."
 LOCAL53="Se instalaron Gnumeric."
+LOCAL54="Remove"
+LOCAL55="Reinstall"
+LOCAL56="Install"
+LOCAL57="This package is already installed."
+LOCAL58="What would you like to do now?"
+LOCAL59="The package has been successfully installed."
+LOCAL60="Should I install the package you have chosen?"
+LOCAL61="This package is not available for your system version."
 ### .desktop file to be translated too
 # Name[es_AR]=Instalador de una suite de oficina
 # Comment[es_AR]=Instala una suite de oficina

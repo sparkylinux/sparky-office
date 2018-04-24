@@ -1,7 +1,7 @@
 # German localization file for Sparky Office by Deflet Bertling
 # Copyright 2015 Pawel "pavroo" Pijanowski <pavroo@onet.eu> 2015/11/08
 # Under the GNU GPL v2
-# Last update 2018/03/30 by pavroo
+# Last update 2018/04/22 by pavroo
 LOCAL1="Name"
 LOCAL2="Beschreibung"
 LOCAL3="Exit"
@@ -55,6 +55,14 @@ LOCAL50="Installiere Gnumeric"
 LOCAL51="Gnumeric ist schon installiert."
 LOCAL52="Das wird Gnumeric installieren.\nStelle sicher dass dein System aktuell ist, bevor du das startest."
 LOCAL53="Gnumeric wurden installiert."
+LOCAL54="Remove"
+LOCAL55="Reinstall"
+LOCAL56="Install"
+LOCAL57="This package is already installed."
+LOCAL58="What would you like to do now?"
+LOCAL59="The package has been successfully installed."
+LOCAL60="Should I install the package you have chosen?"
+LOCAL61="This package is not available for your system version."
 ### .desktop file to be translated to
 # Name[de_DE]=Office Suite-Installations
 # Comment[de_DE]=Installieren Sie eine Office-Suite

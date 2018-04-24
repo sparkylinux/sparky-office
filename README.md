@@ -28,6 +28,10 @@ sparky-remsu
 sparky-xterm (>= 0.2.0)
 yad
 
+Recommends:
+-------------
+sparky-aptus
+
 Install:
 -------------
 su (or sudo) 
