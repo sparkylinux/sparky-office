@@ -4,7 +4,7 @@
 # Copyright 2015-2018 Paweł "pavroo" Pijanowski <pavroo@onet.eu>
 # Licensed under the GPLv2 license see /usr/share/common-licenses/GPL-2
 # Created 2015/05/19
-# Last update 2018/04/22
+# Last update 2018/05/05
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/sparky-office"
@@ -71,8 +71,16 @@ case $1 in
 	PACKAGE="bluegriffon"
 	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
      ;;
+  calibre)
+	PACKAGE="calibre"
+	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
+     ;;
   calligra)
 	PACKAGE="calligra"
+	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
+     ;;
+  comix)
+	PACKAGE="comix"
 	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
      ;;
   emacs)
@@ -83,12 +91,20 @@ case $1 in
 	PACKAGE="evince"
 	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
      ;;
+  galculator)
+	PACKAGE="galculator"
+	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
+     ;;
   geany)
 	PACKAGE="geany"
 	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
      ;;
   gedit)
 	PACKAGE="gedit"
+	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
+     ;;
+  gnome-calculator)
+	PACKAGE="gnome-calculator"
 	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
      ;;
   gnumeric)
@@ -127,6 +143,10 @@ case $1 in
 	fi
 	PACKAGE="master-pdf-editor"
 	CHECKPACKAGE="/opt/master-pdf-editor-4/masterpdfeditor4"
+     ;;
+  mcomix)
+	PACKAGE="mcomix"
+	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
      ;;
   mousepad)
 	PACKAGE="mousepad"
@@ -170,6 +190,14 @@ case $1 in
 	PACKAGE="qpdfview"
 	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
      ;;
+  scribus)
+	PACKAGE="scribus"
+	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
+     ;;
+  simple-scan)
+	PACKAGE="simple-scan"
+	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
+     ;;
   vim)
 	PACKAGE="vim"
 	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
@@ -185,6 +213,10 @@ case $1 in
      ;;
   xpdf)
 	PACKAGE="xpdf"
+	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
+     ;;
+  xsane)
+	PACKAGE="xsane"
 	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
      ;;
 esac
