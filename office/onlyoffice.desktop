@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=ONLYOFFICE
+GenericName=ONLYOFFICE
+Comment=ONLYOFFICE Desktop Editors
+Exec=remsu /usr/bin/sparky-office onlyoffice
+Icon=applications-office
+Terminal=false
+Type=Application
+Categories=Office;
