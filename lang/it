@@ -1,7 +1,7 @@
 # File di localizzazione in italiano per Sparky Office.
 # Copyright 2015 Carlo Troiani <troianicarlo@gmail.com> 08/11/2015
 # Rilasciato sotto licenza GNU GPL v2
-# Last update 2018/04/22 by pavroo
+# Last update 2019/01/30 by pavroo
 LOCAL1="Nome"
 LOCAL2="Descrizione"
 LOCAL3="Esci"
@@ -63,6 +63,11 @@ LOCAL58="Cosa vuoi fare adesso?"
 LOCAL59="Il pacchetto e' stato installato correttamente."
 LOCAL60="Devo installare il pacchetto che hai scelto?"
 LOCAL61="Questo paccehtto non e' disponibile per la tua versione del sistema."
+LOCAL62="WPS Office is not installed."
+LOCAL63="Would you like to install WPS Office language pack?"
+LOCAL64="Supported languages are:"
+LOCAL65="Sto scaricando ed installando i pacchetti di"
+LOCAL66="adesso.\n\Attendi, prego..."
 ### .desktop file to be translated too
 # Name[it_IT]=Office Suite Installer
 # Comment[it_IT]=Installa una suite Office

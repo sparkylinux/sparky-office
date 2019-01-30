@@ -3,7 +3,7 @@
 # Traduzido por  Joel Chaves "Flacc"  <joel_chaves@icloud.com> 24/01/2016
 # Revisado e adaptado por Claudio Cesar de Sá "ccs1664" <ccs1664@gmail.com> 29/01/2016
 # Sob a Licença GNU GPL v2
-# Last update 2018/07/27 by pavroo
+# Last update 2019/01/30 by pavroo
 LOCAL1="Nome"
 LOCAL2="Descrição"
 LOCAL3="Sair"
@@ -65,6 +65,11 @@ LOCAL58="O que você gostaria de fazer agora?"
 LOCAL59="O pacote foi instalado com sucesso."
 LOCAL60="Gostaria de instalar o pacote que você escolheu?"
 LOCAL61="Esse pacote não está disponível para a versão do seu sistema."
+LOCAL62="WPS Office is not installed."
+LOCAL63="Would you like to install WPS Office language pack?"
+LOCAL64="Supported languages are:"
+LOCAL65="Fazendo o download e instalando"
+LOCAL66="pacotes agora.\nPor favor, aguarde..."
 ### Arquivo a ser traduzido também .desktop
 # Name[pt_BR]=Instalador de Suites de Office (Escritório)
 # Comment[pt_BR]=Instale um pacote de algum Office (NT: aplicativo de escritório)

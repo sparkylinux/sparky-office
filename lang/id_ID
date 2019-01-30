@@ -1,8 +1,8 @@
 # Indonesian localization file for Sparky Office.
 # Copyright 2015 Pawel "pavroo" Pijanowski <pavroo@onet.eu> 2015/11/08
 # Under the GNU GPL v2
-# Last update 2018/07/27 by pavroo
 # Translated to Indonesian by les kompie
+# Last update 2019/01/30 by pavroo
 LOCAL1="Nama"
 LOCAL2="Deskripsi"
 LOCAL3="Keluar"
@@ -64,6 +64,11 @@ LOCAL58="Apa yang anda mau lakukan sekarang?"
 LOCAL59="Paket sudah berhasil di-instal."
 LOCAL60="Apakah anda mau menginstal paket yang anda pilih?"
 LOCAL61="Paket ini tidak tersedia untuk versi sistem anda."
+LOCAL62="WPS Office is not installed."
+LOCAL63="Would you like to install WPS Office language pack?"
+LOCAL64="Supported languages are:"
+LOCAL65="Men-download dan menginstal"
+LOCAL66="paket sekarang.\n\Mohon tunggu..."
 ### .desktop file to be translated to
 # Name[id_ID]=Penginstal Office Suite
 # Comment[id_ID]=Untuk menginstal Office suite

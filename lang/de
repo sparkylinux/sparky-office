@@ -1,7 +1,7 @@
 # German localization file for Sparky Office by Deflet Bertling
 # Copyright 2015 Pawel "pavroo" Pijanowski <pavroo@onet.eu> 2015/11/08
 # Under the GNU GPL v2
-# Last update 2018/04/22 by pavroo
+# Last update 2019/01/30 by pavroo
 LOCAL1="Name"
 LOCAL2="Beschreibung"
 LOCAL3="Exit"
@@ -63,6 +63,11 @@ LOCAL58="What would you like to do now?"
 LOCAL59="The package has been successfully installed."
 LOCAL60="Should I install the package you have chosen?"
 LOCAL61="This package is not available for your system version."
+LOCAL62="WPS Office is not installed."
+LOCAL63="Would you like to install WPS Office language pack?"
+LOCAL64="Supported languages are:"
+LOCAL65="Downloaden und installieren"
+LOCAL66="der Pakete.\n\Bitte warten..."
 ### .desktop file to be translated to
 # Name[de_DE]=Office Suite-Installations
 # Comment[de_DE]=Installieren Sie eine Office-Suite

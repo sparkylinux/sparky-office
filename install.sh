@@ -18,6 +18,7 @@ if [ "$1" = "uninstall" ]; then
 	rm -f /usr/bin/sparky-office
 	rm -f /usr/lib/sparky-aptus/office/*
 	rm -rf /usr/share/sparky/sparky-office
+	rm -f /usr/lib/sparky-aptus/bin/wpsmui
 else
 	cp bin/sparky-office /usr/bin/
 	if [ ! -d /usr/lib/sparky-aptus/office ]; then
@@ -28,4 +29,8 @@ else
 		mkdir -p /usr/share/sparky/sparky-office
 	fi
 	cp lang/* /usr/share/sparky/sparky-office/
+	if [ ! -d /usr/lib/sparky-aptus/bin ]; then
+		mkdir -p /usr/lib/sparky-aptus/bin
+	fi
+	cp bin/wpsmui /usr/lib/sparky-aptus/bin/
 fi

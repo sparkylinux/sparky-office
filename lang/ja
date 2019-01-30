@@ -2,7 +2,7 @@
 # Copyright 2015 Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2015/11/08
 # Under the GNU GPL v2
 # Translated to Japanese by BALLOON a.k.a. Fu-sen
-# Last update 2018/04/22 by pavroo
+# Last update 2019/01/30 by pavroo
 LOCAL1="名前"
 LOCAL2="説明"
 LOCAL3="終了"
@@ -64,6 +64,11 @@ LOCAL58="What would you like to do now?"
 LOCAL59="The package has been successfully installed."
 LOCAL60="Should I install the package you have chosen?"
 LOCAL61="This package is not available for your system version."
+LOCAL62="WPS Office is not installed."
+LOCAL63="Would you like to install WPS Office language pack?"
+LOCAL64="Supported languages are:"
+LOCAL65="ダウンロード・インストール中 "
+LOCAL66=" パッケージ\n\nお待ち下さい..."
 ### .desktop file to be translated too
 # Name[ja_JP]=オフィススイートのインストール
 # Comment[ja_JP]=オフィススイートをインストールします。

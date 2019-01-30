@@ -24,9 +24,12 @@ dpkg
 grep
 gawk
 iputils-ping
+p7zip-full
 sparky-remsu
 sparky-xterm (>= 0.2.0)
+wget
 yad
+zenity
 
 Recommends:
 -------------

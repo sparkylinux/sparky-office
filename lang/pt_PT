@@ -1,7 +1,7 @@
 # Arquivo de localização para Portugues de Portugal do Sparky Office.
 # Copyright 2016 Joel Chaves "Flacc" <joel_chaves@icloud.com> Sunday 24 January 00:50:00 WET 2016
 # Sob a Licença GNU GPL v2
-# Last update 2018/04/22 by pavroo
+# Last update 2019/01/30 by pavroo
 LOCAL1="Nome"
 LOCAL2="Descrição"
 LOCAL3="Sair"
@@ -63,6 +63,11 @@ LOCAL58="What would you like to do now?"
 LOCAL59="The package has been successfully installed."
 LOCAL60="Should I install the package you have chosen?"
 LOCAL61="This package is not available for your system version."
+LOCAL62="WPS Office is not installed."
+LOCAL63="Would you like to install WPS Office language pack?"
+LOCAL64="Supported languages are:"
+LOCAL65="Fazer Download e Instalar"
+LOCAL66="pacotes actuais.\n\Por favor, aguarde..."
 ### Arquivo a ser traduzido também .desktop
 # Name[pt_P]=Office Suite Installer
 # Comment[pt_PT]=Instale um pacote Office

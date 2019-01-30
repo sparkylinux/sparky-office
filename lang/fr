@@ -1,7 +1,7 @@
 ﻿# Fichier de localisation française de Sparky Office.
 # Copyright 2016 hiver <hiver@club-internet.fr> 2016/05/12
 # Sous licence GNU GPL v2
-# Dernière mise à jour 2018/09/25
+# Last update 2019/01/30 by pavroo
 LOCAL1="Nom"
 LOCAL2="Description"
 LOCAL3="Quitter"
@@ -63,6 +63,11 @@ LOCAL58="Que voulez-vous faire à présent?"
 LOCAL59="Le paquet a été installé avec succès."
 LOCAL60="Dois-je installer le paquet que vous avez choisi?"
 LOCAL61="Ce paquet n'est pas disponible pour votre version du système."
+LOCAL62="WPS Office is not installed."
+LOCAL63="Would you like to install WPS Office language pack?"
+LOCAL64="Supported languages are:"
+LOCAL65="Téléchargeons et installons"
+LOCAL66="les paquets à présent.\n\S'il vous plaît, patientez..."
 ### .desktop file to be translated to
 # Name[fr_FR]=Installateur de suite bureautique
 # Comment[fr_FR]=Installe une suite bureautique

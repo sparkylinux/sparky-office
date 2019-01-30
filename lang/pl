@@ -2,7 +2,7 @@
 # Copyright 2015 Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2015/11/08
 # Under the GNU GPL v2
 # Translated to Polish by pavroo
-# Last update 2018/04/22 by pavroo
+# Last update 2019/01/30 by pavroo
 LOCAL1="Nazwa"
 LOCAL2="Opis"
 LOCAL3="Zakończ"
@@ -64,6 +64,11 @@ LOCAL58="Co chcesz teraz zrobić?"
 LOCAL59="Pakiet został poprawnie zainstalowany."
 LOCAL60="Czy mam zainstalować wybrany pakiet?"
 LOCAL61="Ten pakiet nie jest dostępny dla wersji twojego systemu."
+LOCAL62="WPS Office nie jest zainstalowany."
+LOCAL63="Czy chcesz zainstalować pakiet językowy dla WPS Office?"
+LOCAL64="Wspierane pakiety językowe:"
+LOCAL65="Pobieranie i instalacja"
+LOCAL66="pakietów.\n\Proszę czekać..."
 ### .desktop file, również do przetłumaczenia
 # Name[pl_PL]=Instalacja pakietu biurowego
 # Comment[pl_PL]=Instalacja pakietu biurowego
