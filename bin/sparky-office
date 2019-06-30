@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # sparky-office script lets you install an office app you like
-# Copyright 2015-2018 Paweł "pavroo" Pijanowski <pavroo@onet.eu>
+# Copyright 2015-2019 Paweł "pavroo" Pijanowski <pavroo@onet.eu>
 # Licensed under the GPLv2 license see /usr/share/common-licenses/GPL-2
 # Created 2015/05/19
-# Last update 2019/01/30
+# Last update 2019/06/30
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/sparky-office"
@@ -26,6 +26,8 @@ elif [ "`cat /etc/default/locale | grep pt_BR`" != "" ]; then
 . $DEFLOCDIR/pt_BR
 elif [ "`cat /etc/default/locale | grep pt_PT`" != "" ]; then
 . $DEFLOCDIR/pt_PT
+elif [ "`cat /etc/default/locale | grep ru`" != "" ]; then
+. $DEFLOCDIR/ru
 else
 . $DEFLOCDIR/en
 fi
