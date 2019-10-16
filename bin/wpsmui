@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Created by Elton <eltonfabricio10@gmail.com> 2019
-# Last update 2019/06/30 by pavroo
+# Last update 2019/10/16 by pavroo
 
 DEFLOCDIR="/usr/share/sparky/sparky-office"
 if [ "`cat /etc/default/locale | grep de`" != "" ]; then
@@ -13,6 +13,9 @@ elif [ "`cat /etc/default/locale | grep es`" != "" ]; then
 elif [ "`cat /etc/default/locale | grep fr`" != "" ]; then
 	LANGWPS="fr_fr"
 	. $DEFLOCDIR/fr
+elif [ "`cat /etc/default/locale | grep hu`" != "" ]; then
+	LANGWPS="hu_hu"
+	. $DEFLOCDIR/hu
 elif [ "`cat /etc/default/locale | grep ja_JP`" != "" ]; then
 	LANGWPS="ja_jp"
 	. $DEFLOCDIR/ja
