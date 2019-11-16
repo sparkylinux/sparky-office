@@ -1,12 +1,15 @@
 #!/bin/bash
 
 # Created by Elton <eltonfabricio10@gmail.com> 2019
-# Last update 2019/10/16 by pavroo
+# Last update 2019/11/16 by pavroo
 
 DEFLOCDIR="/usr/share/sparky/sparky-office"
 if [ "`cat /etc/default/locale | grep de`" != "" ]; then
 	LANGWPS="de_de"
 	. $DEFLOCDIR/de
+elif [ "`cat /etc/default/locale | grep el`" != "" ]; then
+	LANGWPS="el_gr"
+	. $DEFLOCDIR/el
 elif [ "`cat /etc/default/locale | grep es`" != "" ]; then
 	LANGWPS="es_es"
 	. $DEFLOCDIR/es
