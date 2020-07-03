@@ -25,6 +25,7 @@ grep
 gawk
 iputils-ping
 p7zip-full
+sparky-info
 sparky-remsu
 sparky-xterm (>= 0.2.0)
 wget
