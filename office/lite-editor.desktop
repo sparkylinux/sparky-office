@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Lite Editor
+GenericName=Lite Editor
+Comment=A lightweight text editor written in Lua
+Comment[pl_PL]=Lekki edytor tekstu napisany w Lua
+Exec=remsu /usr/bin/sparky-office lite-editor
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Utility;TextEditor;
+Icon=lite-editor
