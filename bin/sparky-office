@@ -4,7 +4,7 @@
 # Copyright 2015-2020 Paweł "pavroo" Pijanowski <pavroo@onet.eu>
 # Licensed under the GPLv2 license see /usr/share/common-licenses/GPL-2
 # Created 2015/05/19
-# Last update 2020/08/08
+# Last update 2020/08/0823
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/sparky-office"
@@ -169,6 +169,10 @@ case $1 in
 	CHECKPACKAGE="/usr/share/doc/$PACKAGE"
      ;;
   joplin)
+	if [ "$SPARKYVERCHECK5" != "" ] || [ "$SPARKYVERCHECK4" != "" ]; then
+		$DIALOG $TEXT"$LOCAL61\n\n$LOCAL14" $TITLE"$TITLETEXT" $MSGBOX
+		exit 1
+	fi
 	if [ "$ARCH64" = "" ]; then
 		$DIALOG $TEXT"\n$LOCAL49\n\n$LOCAL14" $TITLE"$TITLETEXT" $MSGBOX
 		exit 1
