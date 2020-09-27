@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=NobleNote
+Comment=Qt program for taking notes
+Exec=remsu /usr/bin/sparky-office noblenote
+Icon=noblenote
+Terminal=false
+Type=Application
+Categories=Office;
