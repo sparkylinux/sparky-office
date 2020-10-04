@@ -1,0 +1,19 @@
+[Desktop Entry]
+Name=AbiWord
+Comment=AbiWord Text Editor
+Comment[de]=AbiWord Textverarbeitung
+Comment[es]=Procesador de textos Abiword
+Comment[fr]=Traitement de texte de Gnome Office
+Comment[nb]=AbiWord Tekstbehandling
+Comment[nl]=AbiWord tekstverwerker
+Comment[nn]=AbiWord Tekstbehandling
+Comment[no]=AbiWord Tekstbehandler
+Comment[pl]=Edytor tekstu AbiWord
+Comment[pt]=AbiWord Processador de Texto
+Comment[ru]=Обработка форматированных текстовых документов
+Comment[ja]=AbiWord ワードプロセッサ
+Exec=remsu /usr/bin/sparky-office abiword
+Icon=abiword
+Terminal=false
+Type=Application
+Categories=Office;

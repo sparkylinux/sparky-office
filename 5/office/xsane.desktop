@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=XSane
+Comment=XSane Image scanning program
+Comment[ru]=Программа для сканирования изображений
+Comment[ca]=Programa d'escaneig d'imatges XSane
+Comment[es]=Programa de escaneo de imágenes XSane
+Comment[fr]=Programme d'acquisition d'images XSane
+Comment[pl]=XSane program do obsługi skanera
+Exec=remsu /usr/bin/sparky-office xsane
+Icon=xsane
+Terminal=false
+Type=Application
+Categories=Office;

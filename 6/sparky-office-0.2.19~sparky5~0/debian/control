@@ -1,0 +1,14 @@
+Source: sparky-office
+Section: Office
+Priority: optional
+Maintainer: pavroo <pavroo@onet.eu>
+Build-Depends: debhelper (>=9), build-essential, coreutils
+Standards-Version: 3.9.6
+Homepage: https://sparkylinux.org
+
+Package: sparky-office
+Architecture: all
+Depends: apt, coreutils, dpkg, grep, gawk, iputils-ping, p7zip-full, sparky-remsu, sparky-xterm (>= 0.2.0), wget, yad, zenity
+Recommends: sparky-aptus
+Description: Sparky Office
+  This tool lets you install an office suit you like

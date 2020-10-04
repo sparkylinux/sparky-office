@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Knotes
+Comment=Sticky notes application
+Comment[pl]=Program do tworzenia notatek na samoprzylepnych karteczkach
+Exec=remsu /usr/bin/sparky-office knotes
+Icon=knotes
+Terminal=false
+Type=Application
+Categories=Office;

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Gnote
+Comment=Desktop note taking program using Wiki style links 
+Comment[pl]=Program do tworzenia notatek na pulpicie, używający odnośników w stylu Wiki
+Exec=remsu /usr/bin/sparky-office gnote
+Icon=gnote
+Terminal=false
+Type=Application
+Categories=Office;

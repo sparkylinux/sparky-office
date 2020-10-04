@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Note
+Comment=Small program managing notes from commandline 
+Exec=remsu /usr/bin/sparky-office note
+Icon=terminal
+Terminal=false
+Type=Application
+Categories=Office;

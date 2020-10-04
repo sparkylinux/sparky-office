@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Zim
+GenericName=Zim
+Comment=Graphical text editor based on wiki technologies 
+Comment[pl_PL]=Graficzny edytor tekstu bazujący na technologi wiki
+Exec=remsu /usr/bin/sparky-office zim
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Utility;TextEditor;
+Icon=text-editor

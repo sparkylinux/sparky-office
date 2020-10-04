@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Calibre
+Comment=E-book library management
+Comment[de]=E-Book Bibliotheksverwaltung
+Comment[pl]=Zarządzanie biblioteką e-booków
+Exec=remsu /usr/bin/sparky-office calibre
+Icon=calibre-gui
+Terminal=false
+Type=Application
+Categories=Office;

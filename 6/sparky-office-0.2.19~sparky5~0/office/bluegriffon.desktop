@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=BlueGriffon
+Comment=BlueGriffon, the Web editor
+Comment[pl]=BlueGriffon - edytor stron www
+Exec=remsu /usr/bin/sparky-office bluegriffon
+Icon=bluegriffon
+Terminal=false
+Type=Application
+Categories=Office;

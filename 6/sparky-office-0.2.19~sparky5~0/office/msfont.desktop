@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=MS Fonts
+Name[pl]=Czcionki MS
+Name[pt_BR]=MS Fontes
+Comment=Install Microsoft font
+Comment[pl]=Instalacja czcionek Microsoft
+Comment[pt_BR]=Instala as fontes da Microsoft
+Exec=remsu /usr/bin/sparky-office msfont
+Icon=font
+Terminal=false
+Type=Application
+Categories=Office;

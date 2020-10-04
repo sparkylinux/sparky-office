@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Leo Editor
+Comment=Leo Editor
+Comment[pl]=Edytor Leo
+Exec=remsu /usr/bin/sparky-office leo
+Icon=leo
+Terminal=false
+Type=Application
+Categories=Office;
