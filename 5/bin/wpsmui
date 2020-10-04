@@ -4,34 +4,34 @@
 # Last update 2020/06/27 by pavroo
 
 DEFLOCDIR="/usr/share/sparky/sparky-office"
-if [ "`cat /etc/default/locale | grep LANG=de`" != "" ]; then
+if [ "`cat /etc/default/locale | grep LANG= | grep de`" != "" ]; then
 	LANGWPS="de_de"
 	. $DEFLOCDIR/de
-elif [ "`cat /etc/default/locale | grep LANG=el`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG= | grep el`" != "" ]; then
 	LANGWPS="el_gr"
 	. $DEFLOCDIR/el
-elif [ "`cat /etc/default/locale | grep LANG=es`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG= | grep es`" != "" ]; then
 	LANGWPS="es_es"
 	. $DEFLOCDIR/es
-elif [ "`cat /etc/default/locale | grep LANG=fr`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG= | grep fr`" != "" ]; then
 	LANGWPS="fr_fr"
 	. $DEFLOCDIR/fr
-elif [ "`cat /etc/default/locale | grep LANG=hu`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG= | grep hu`" != "" ]; then
 	LANGWPS="hu_hu"
 	. $DEFLOCDIR/hu
-elif [ "`cat /etc/default/locale | grep LANG=ja_JP`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG= | grep ja_JP`" != "" ]; then
 	LANGWPS="ja_jp"
 	. $DEFLOCDIR/ja
-elif [ "`cat /etc/default/locale | grep LANG=pl`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG= | grep pl`" != "" ]; then
 	LANGWPS="pl_pl"
 	. $DEFLOCDIR/pl
-elif [ "`cat /etc/default/locale | grep LANG=pt_BR`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG= | grep pt_BR`" != "" ]; then
 	LANGWPS="pt_br"
 	. $DEFLOCDIR/pt_BR
-elif [ "`cat /etc/default/locale | grep LANG=pt_PT`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG= | grep pt_PT`" != "" ]; then
 	LANGWPS="pt_pt"
 	. $DEFLOCDIR/pt_PT
-elif [ "`cat /etc/default/locale | grep LANG=ru`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG= | grep ru`" != "" ]; then
 	LANGWPS="ru_ru"
 	. $DEFLOCDIR/ru
 else
