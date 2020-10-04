@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=WPS Office
-Comment=A simple, powerful office suite with a comfortable interface
-Exec=remsu /usr/bin/sparky-office wps-office
-Icon=calligrawords
-Terminal=false
-Type=Application
-Categories=Office;

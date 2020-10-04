@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Rhinote
-Comment=Virtual sticky-notes for your desktop
-Exec=remsu /usr/bin/sparky-office rhinote
-Icon=rhinote
-Terminal=false
-Type=Application
-Categories=Office;

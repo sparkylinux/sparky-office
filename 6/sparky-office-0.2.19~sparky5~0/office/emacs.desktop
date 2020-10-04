@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=GNU Emacs (GUI)
-Comment=GNU Emacs is an extensible, customizable text editor
-Comment[pl]=GNU Emasc to rozszerzalny, dostosowywalny edytor tekstu
-Exec=remsu /usr/bin/sparky-office emacs
-Icon=emacs
-Terminal=false
-Type=Application
-Categories=Office;

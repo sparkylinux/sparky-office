@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=MuPDF
-Comment=PDF file viewer
-Exec=remsu /usr/bin/sparky-office mupdf
-Icon=mupdf
-Terminal=false
-Type=Application
-Categories=Office;

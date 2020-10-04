@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Brackets
-Comment=Open-source editor for web design and development
-Exec=remsu /usr/bin/sparky-office brackets
-Icon=text-editor
-Terminal=false
-Type=Application
-Categories=Office;

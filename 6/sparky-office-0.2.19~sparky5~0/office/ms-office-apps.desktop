@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=MS Online Applications
-Comment=Microsoft Online Applications
-Exec=remsu /usr/bin/sparky-office ms-online-apps
-Icon=application-word
-Terminal=false
-Type=Application
-Categories=Office;

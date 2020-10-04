@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Feathernotes
-Comment=Hierarchical notes-manager
-Exec=remsu /usr/bin/sparky-office feathernotes
-Icon=feathernotes
-Terminal=false
-Type=Application
-Categories=Office;

@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Kjots
-Comment=Note-taking utility
-Comment[pl]=Program do sporządzania notatek
-Exec=remsu /usr/bin/sparky-office kjots
-Icon=kjots
-Terminal=false
-Type=Application
-Categories=Office;

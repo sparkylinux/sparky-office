@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=qpdfview
-Comment=A tabbed document viewer using Qt and the Poppler library
-Exec=remsu /usr/bin/sparky-office qpdfview
-Icon=qpdfview
-Terminal=false
-Type=Application
-Categories=Office;

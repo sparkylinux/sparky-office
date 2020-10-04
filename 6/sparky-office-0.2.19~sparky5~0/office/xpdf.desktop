@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=xpdf
-Comment=View PDF files
-Exec=remsu /usr/bin/sparky-office xpdf
-Icon=xpdf
-Terminal=false
-Type=Application
-Categories=Office;
