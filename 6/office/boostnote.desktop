@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Boostnote
+Comment=Note-taking app for programmers
+Exec=remsu /usr/bin/sparky-office boostnote
+Icon=gnote
+Terminal=false
+Type=Application
+Categories=Office;
