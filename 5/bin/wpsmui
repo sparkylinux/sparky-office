@@ -34,6 +34,9 @@ elif [ "`cat /etc/default/locale | grep LANG= | grep pt_PT`" != "" ]; then
 elif [ "`cat /etc/default/locale | grep LANG= | grep ru`" != "" ]; then
 	LANGWPS="ru_ru"
 	. $DEFLOCDIR/ru
+elif [ "`cat /etc/default/locale | grep LANG= | grep zh_CN`" != "" ]; then
+	LANGWPS="zh_cn"
+	. $DEFLOCDIR/zh_CN
 else
 	LANGWPS="en_gb"
 	. $DEFLOCDIR/en
