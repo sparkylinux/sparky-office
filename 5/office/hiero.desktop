@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Hiero
+Comment=Create outlines
+Exec=remsu /usr/bin/sparky-office hiero
+Icon=hiero
+Terminal=false
+Type=Application
+Categories=Office;
